@@ -1,0 +1,65 @@
+﻿<Window x:Class="Exe1.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Exe1"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <!-- Definindo o fundo do Grid com uma imagem -->
+        <Grid.Background>
+            <ImageBrush ImageSource="/81075990_RSBoteco-Beleza.jpg"/>
+        </Grid.Background>
+
+        <!-- Grid de login -->
+        <Grid x:Name="LoginGrid" HorizontalAlignment="Center" Height="312" VerticalAlignment="Center" Width="508" Background="White">
+            <Rectangle HorizontalAlignment="Left" Height="312" Stroke="Black" VerticalAlignment="Center" Width="26">
+                <Rectangle.Fill>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="Black"/>
+                        <GradientStop Color="White" Offset="1"/>
+                    </LinearGradientBrush>
+                </Rectangle.Fill>
+            </Rectangle>
+            <Rectangle HorizontalAlignment="Left" Height="312" Stroke="Black" VerticalAlignment="Center" Width="26" Margin="482,0,0,0">
+                <Rectangle.Fill>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="Black"/>
+                        <GradientStop Color="White" Offset="1"/>
+                    </LinearGradientBrush>
+                </Rectangle.Fill>
+            </Rectangle>
+            <Rectangle HorizontalAlignment="Center" Height="0" Stroke="Black" VerticalAlignment="Center" Width="0"/>
+            <Rectangle HorizontalAlignment="Center" Height="15" Stroke="Black" VerticalAlignment="Top" Width="456">
+                <Rectangle.Fill>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="Black"/>
+                        <GradientStop Color="White" Offset="1"/>
+                    </LinearGradientBrush>
+                </Rectangle.Fill>
+            </Rectangle>
+            <Rectangle HorizontalAlignment="Center" Height="15" Stroke="Black" VerticalAlignment="Top" Width="456" Margin="0,297,0,0">
+                <Rectangle.Fill>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="Black"/>
+                        <GradientStop Color="White" Offset="1"/>
+                    </LinearGradientBrush>
+                </Rectangle.Fill>
+            </Rectangle>
+            <TextBlock HorizontalAlignment="Left" Height="60" Margin="34,28,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="173" FontSize="48" FontFamily="Comic Sans MS"><Run Language="pt-br" Text="LOGIN"/></TextBlock>
+            <TextBlock HorizontalAlignment="Left" Height="21" Margin="58,112,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="124"><Run Language="pt-br" Text="Email ou Username"/></TextBlock>
+            <TextBlock HorizontalAlignment="Left" Height="21" Margin="58,187,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="124"><Run Language="pt-br" Text="Senha"/><LineBreak/><Run Language="pt-br"/></TextBlock>
+            <Border BorderBrush="Gray" BorderThickness="1" CornerRadius="4" Background="White" Margin="58,0,86,0" VerticalAlignment="Center">
+                <TextBlock HorizontalAlignment="Left" Height="19" TextWrapping="Wrap" VerticalAlignment="Center" Width="184" Margin="9,0,0,0" Padding="5"><Run Language="pt-br" Text="INSIRA EMAIL OU USERNAME"/><LineBreak/><Run Language="pt-br"/></TextBlock>
+            </Border>
+            <Border BorderBrush="Gray" BorderThickness="1" CornerRadius="4" Background="White" Margin="58,224,86,0" VerticalAlignment="Top">
+                <TextBlock HorizontalAlignment="Left" Height="19" TextWrapping="Wrap" VerticalAlignment="Top" Width="284" Margin="10,0,0,0" Padding="5"><Run Language="pt-br" Text="INSIRA SUA SENHA..."/><LineBreak/><Run Language="pt-br"/></TextBlock>
+            </Border>
+            <Button Content="Confirmar" HorizontalAlignment="Center" Height="28" Margin="0,256,0,0" VerticalAlignment="Top" Width="120" FontSize="22" Background="#FFDDDDDD" FontFamily="Comic Sans MS" Click="Confirmar_Click"/>
+        </Grid>
+
+        <!-- Frame para navegação -->
+        <Frame x:Name="MainFrame" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" NavigationUIVisibility="Hidden" Visibility="Collapsed"/>
+    </Grid>
+</Window>
